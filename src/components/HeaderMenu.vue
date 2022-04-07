@@ -29,7 +29,6 @@
     padding: 20px 220px 0;
     height: 60px;
     background-color: #fff;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     .logo {
         width: 150px;
         height: 100%;
@@ -112,6 +111,7 @@
             }
         }
         .cart {
+            margin-left: 10px;
             min-width: 50px;
             width: 100%;
         }

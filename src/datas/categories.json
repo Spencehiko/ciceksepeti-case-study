@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "title": "Elektronik"
+    },
+    {
+        "id": 2,
+        "title": "Ev ve Yaşam"
+    },
+    {
+        "id": 3,
+        "title": "Evcil Hayvan"
+    },
+    {
+        "id": 4,
+        "title": "Kitap"
+    },
+    {
+        "id": 5,
+        "title": "Oyuncak"
+    },
+    {
+        "id": 6,
+        "title": "Spor"
+    },
+    {
+        "id": 7,
+        "title": "Çiçek"
+    },
+    {
+        "id": 8,
+        "title": "Hediye"
+    },
+    {
+        "id": 9,
+        "title": "Moda,Aksesuar"
+    },
+    {
+        "id": 10,
+        "title": "Ofis,Kırtasiye"
+    },
+    {
+        "id": 11,
+        "title": "Parfüm"
+    },
+    {
+        "id": 12,
+        "title": "Kişisel Bakım"
+    },
+    {
+        "id": 13,
+        "title": "Petshop"
+    }
+]
