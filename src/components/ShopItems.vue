@@ -86,8 +86,7 @@ const { products, categoryName, productQuantity } = storeToRefs(store);
         gap: 30px 20px;
         .product {
             height: 100%;
-            flex-grow: 1;
-            flex-shrink: 0;
+            flex-grow: 0;
             flex-basis: calc(20% - 60px);
             border: 1px solid #e2e7e9;
             padding: 20px;
@@ -184,7 +183,7 @@ const { products, categoryName, productQuantity } = storeToRefs(store);
     .shop {
         .products {
             .product {
-                flex-basis: calc(50% - 60px);
+                flex-basis: calc(33% - 60px);
             }
         }
     }
@@ -192,9 +191,13 @@ const { products, categoryName, productQuantity } = storeToRefs(store);
 @media screen and (max-width: 1024px) {
     .shop {
         padding: 0 20px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .shop {
         .products {
             .product {
-                flex-basis: calc(33% - 60px);
+                flex-basis: calc(100% - 60px);
             }
         }
     }
