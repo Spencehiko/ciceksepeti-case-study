@@ -3,7 +3,7 @@ import { storeToRefs } from 'pinia';
 import { useStore } from '../stores/store';
 
 const store = useStore();
-const { addToCart, changeQuantity } = store; 
+const { addToCart, changeQuantity } = store;
 const { products, categoryName, productQuantity } = storeToRefs(store);
 
 </script>
@@ -129,6 +129,9 @@ const { products, categoryName, productQuantity } = storeToRefs(store);
                     span {
                         font-size: 14px;
                         color: #51b549;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
                     }
                 }
                 .add-to-cart {
@@ -147,6 +150,51 @@ const { products, categoryName, productQuantity } = storeToRefs(store);
                         color: #fff;
                     }
                 }
+                .buttons-div {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border: 1px solid #e2e7e9;
+                    border-radius: 25px;
+                    .decrease,
+                    .increase {
+                        border-radius: 50%;
+                        border: none;
+                        background: #fff;
+                        cursor: pointer;
+                        transition: all 0.4s;
+                        img {
+                            display: inline-block;
+                            width: 30px;
+                            height: 30px;
+                            vertical-align: middle;
+                        }
+                    }
+                    .quantity {
+                        font-size: 18px;
+                        font-weight: lighter;
+                        color: #000000;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1226px) {
+    .shop {
+        .products {
+            .product {
+                flex-basis: calc(50% - 60px);
+            }
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .shop {
+        padding: 0 20px;
+        .products {
+            .product {
+                flex-basis: calc(33% - 60px);
             }
         }
     }
