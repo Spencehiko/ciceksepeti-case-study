@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { storeToRefs } from 'pinia';
+import { useStore } from '../stores/store';
+
+const store = useStore();
+const { cart } = storeToRefs(store);
 </script>
 
 <template>
@@ -16,7 +21,7 @@
         <div class="cart">
             <img src="@/assets/images/cart.svg" alt="Sepet" class="cart-icon" />
             <span class="cart-text">Sepetim</span>
-            <span class="cart-item-count">0</span>
+            <span class="cart-item-count">{{ cart.length }}</span>
         </div>
     </div>
 </template>
@@ -26,7 +31,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 220px 0;
     height: 60px;
     background-color: #fff;
     .logo {

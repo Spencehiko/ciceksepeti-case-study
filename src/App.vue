@@ -8,7 +8,7 @@ import FooterMenu from "./components/FooterMenu.vue";
 
 <template>
     <header>
-        <HeaderMenu />
+        <HeaderMenu class="component" />
         <div class="divider">
             <span>ÇiçekSepeti</span>
         </div>
@@ -19,9 +19,9 @@ import FooterMenu from "./components/FooterMenu.vue";
         </div>
     </header>
     <main>
-        <FilterMenu />
-        <ShopItems />
-        <CampaignItems />
+        <FilterMenu class="component" />
+        <ShopItems class="component" />
+        <CampaignItems class="component" />
     </main>
     <footer>
         <FooterMenu />
@@ -38,12 +38,16 @@ body {
 input, textarea, button {
     font-family: inherit;
 }
+.component {
+    margin-top: 20px;
+    padding: 0 220px;
+}
 .divider {
     font-size: 35px;
     font-weight: 700;
     color: #fff;
     margin: 30px auto 0;
-    width: 100vw;
+    width: 100%;
     height: 60px;
     text-align: left;
     background: url("@/assets/images/header-bg.png") no-repeat center;

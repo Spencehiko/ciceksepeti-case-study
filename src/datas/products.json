@@ -1,7 +1,7 @@
 [{
         "id": 1,
         "title": "Z6 Akıllı Saat Kameralı Konuşma Garantili Sim Kartlı Bluetooth",
-        "imgSrc": "@/assets/images/products/watch.png",
+        "imgSrc": "/src/assets/images/watch.png",
         "categories": [1, 9],
         "isFreeDelivery": true,
         "price": 399.90
@@ -9,7 +9,7 @@
     {
         "id": 2,
         "title": "Calvin Klein Euphoria EDP 100 ml Kadın Parfüm",
-        "imgSrc": "@/assets/images/products/perfume.png",
+        "imgSrc": "/src/assets/images/perfume.png",
         "categories": [11],
         "isFreeDelivery": false,
         "price": 145.61
@@ -17,7 +17,7 @@
     {
         "id": 3,
         "title": "Gold Çizgili Vazoda 2 Dal Orkide Çiçeği",
-        "imgSrc": "@/assets/images/products/orchid.png",
+        "imgSrc": "/src/assets/images/orchid.png",
         "categories": [2, 7],
         "isFreeDelivery": true,
         "price": 249.90
@@ -25,7 +25,7 @@
     {
         "id": 4,
         "title": "925 Ayar Gümüş Çeyreklik Bileklik (Y)",
-        "imgSrc": "@/assets/images/products/bracelet.png",
+        "imgSrc": "/src/assets/images/bracelet.png",
         "categories": [8, 9],
         "isFreeDelivery": false,
         "price": 329.90
@@ -33,7 +33,7 @@
     {
         "id": 5,
         "title": "Sailor SD-3160 Siyah Dağcı Seyahat Sırt Çantası 55 LT Outdoor-Trekking",
-        "imgSrc": "@/assets/images/products/bag.png",
+        "imgSrc": "/src/assets/images/bag.png",
         "categories": [6, 9],
         "isFreeDelivery": true,
         "price": 499.90
@@ -41,7 +41,7 @@
     {
         "id": 6,
         "title": "Büyük Boy Metal Osmanlı Bizans Satranç Takımı Parlak",
-        "imgSrc": "@/assets/images/products/chess.png",
+        "imgSrc": "/src/assets/images/chess.png",
         "categories": [5, 6, 8],
         "isFreeDelivery": true,
         "price": 19.90
@@ -49,7 +49,7 @@
     {
         "id": 7,
         "title": "130 Cm Papyonlu Büyük Ayıcı (%100 Yerli)",
-        "imgSrc": "@/assets/images/products/bear.png",
+        "imgSrc": "/src/assets/images/teddybear.png",
         "categories": [5, 8],
         "isFreeDelivery": true,
         "price": 89.90
@@ -57,7 +57,7 @@
     {
         "id": 8,
         "title": "925 Ayar Gümüş Dualı İsimli Nazar İğnesi",
-        "imgSrc": "@/assets/images/products/brooch.png",
+        "imgSrc": "/src/assets/images/brooch.png",
         "categories": [8, 9],
         "isFreeDelivery": true,
         "price": 29.90
@@ -65,7 +65,7 @@
     {
         "id": 9,
         "title": "Özel Tatlar Çikolata Kutusu 300 gr",
-        "imgSrc": "@/assets/images/products/chocolate.png",
+        "imgSrc": "/src/assets/images/chocolate.png",
         "categories": [8],
         "isFreeDelivery": true,
         "price": 59.90
@@ -73,7 +73,7 @@
     {
         "id": 10,
         "title": "Kucak Dolusu Aşk 25 Kırmızı Gül Buketi",
-        "imgSrc": "@/assets/images/products/rose.png",
+        "imgSrc": "/src/assets/images/rose.png",
         "categories": [7, 8],
         "isFreeDelivery": false,
         "price": 199.90
@@ -81,7 +81,7 @@
     {
         "id": 11,
         "title": "Z7 Akıllı Saat Kameralı Konuşma Garantili Sim Kartlı Bluetooth",
-        "imgSrc": "@/assets/images/products/watch.png",
+        "imgSrc": "/src/assets/images/watch.png",
         "categories": [1, 9],
         "isFreeDelivery": true,
         "price": 499.90
@@ -89,7 +89,7 @@
     {
         "id": 12,
         "title": "Calvin Klein Euphoria EDP 200 ml Kadın Parfüm",
-        "imgSrc": "@/assets/images/products/perfume.png",
+        "imgSrc": "/src/assets/images/perfume.png",
         "categories": [11],
         "isFreeDelivery": false,
         "price": 249.90
@@ -97,7 +97,7 @@
     {
         "id": 13,
         "title": "Özel Tatlar Çikolata Kutusu 500 gr",
-        "imgSrc": "@/assets/images/products/chocolate.png",
+        "imgSrc": "/src/assets/images/chocolate.png",
         "categories": [8],
         "isFreeDelivery": true,
         "price": 79.90
@@ -105,7 +105,7 @@
     {
         "id": 14,
         "title": "927 Ayar Gümüş Çeyreklik Bileklik",
-        "imgSrc": "@/assets/images/products/bracelet.png",
+        "imgSrc": "/src/assets/images/bracelet.png",
         "categories": [8, 9],
         "isFreeDelivery": false,
         "price": 399.90
@@ -113,7 +113,7 @@
     {
         "id": 15,
         "title": "Sailor SD-3160 Siyah Dağcı Seyahat Sırt Çantası 45 LT Outdoor-Trekking",
-        "imgSrc": "@/assets/images/products/bag.png",
+        "imgSrc": "/src/assets/images/bag.png",
         "categories": [6, 9],
         "isFreeDelivery": true,
         "price": 324.90
@@ -121,7 +121,7 @@
     {
         "id": 16,
         "title": "100 Cm Papyonlu Büyük Ayıcı (%100 Yerli)",
-        "imgSrc": "@/assets/images/products/bear.png",
+        "imgSrc": "/src/assets/images/teddybear.png",
         "categories": [5, 8],
         "isFreeDelivery": true,
         "price": 59.90
@@ -129,7 +129,7 @@
     {
         "id": 17,
         "title": "928 Ayar Gümüş Dualı İsimli Nazar İğnesi",
-        "imgSrc": "@/assets/images/products/brooch.png",
+        "imgSrc": "/src/assets/images/brooch.png",
         "categories": [8, 9],
         "isFreeDelivery": true,
         "price": 419.90
@@ -137,7 +137,7 @@
     {
         "id": 18,
         "title": "Gold Çizgili Vazoda 3 Dal Orkide Çiçeği",
-        "imgSrc": "@/assets/images/products/orchid.png",
+        "imgSrc": "/src/assets/images/orchid.png",
         "categories": [2, 7],
         "isFreeDelivery": false,
         "price": 299.90
@@ -145,7 +145,7 @@
     {
         "id": 19,
         "title": "Kucak Dolusu Aşk 50 Kırmızı Gül Buketi",
-        "imgSrc": "@/assets/images/products/rose.png",
+        "imgSrc": "/src/assets/images/rose.png",
         "categories": [7, 8],
         "isFreeDelivery": false,
         "price": 319.90
@@ -153,7 +153,7 @@
     {
         "id": 20,
         "title": "Özel Tatlar Çikolata Kutusu 1000 gr",
-        "imgSrc": "@/assets/images/products/chocolate.png",
+        "imgSrc": "/src/assets/images/chocolate.png",
         "categories": [8],
         "isFreeDelivery": true,
         "price": 124.90

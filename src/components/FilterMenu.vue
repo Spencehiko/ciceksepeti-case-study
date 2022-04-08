@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import categories from '@/datas/categories.json';
 import { storeToRefs } from 'pinia';
 import { useStore } from '../stores/store';
 
 const store = useStore();
-const { category } = storeToRefs(store);
+const { categories } = store;
+const { categoryId } = storeToRefs(store);
 
 </script>
 
@@ -15,15 +15,19 @@ const { category } = storeToRefs(store);
             <span>Kategoriler</span>
         </div>
         <div class="wrapper">
-            <button class="category" :class="{ active: category === 0 }" @click="category = 0">
+            <button
+                class="category"
+                :class="{ active: categoryId === 0 }"
+                @click="categoryId = 0"
+            >
                 Tüm Kategoriler
             </button>
             <button
                 v-for="categoryItem in categories"
                 :key="categoryItem.id"
                 class="category"
-                :class="{ active: category === categoryItem.id }"
-                @click="category = categoryItem.id"
+                :class="{ active: categoryId === categoryItem.id }"
+                @click="categoryId = categoryItem.id"
             >
                 {{ categoryItem.title }}
             </button>
@@ -32,15 +36,13 @@ const { category } = storeToRefs(store);
 </template>
 <style lang="less" scoped>
 .filter {
-    margin-top: 20px;
-    padding: 0 220px;
     .header {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         img {
             width: 20px;
             height: 19px;
         }
-        & span {
+        span {
             font-size: 24px;
             font-weight: 400;
             color: var(--color-blue);
@@ -50,6 +52,7 @@ const { category } = storeToRefs(store);
     .wrapper {
         display: flex;
         flex-wrap: wrap;
+        gap: 20px 1%;
         .category {
             height: 50px;
             flex-grow: 1;
@@ -57,32 +60,20 @@ const { category } = storeToRefs(store);
             flex-basis: 13.28%;
             width: 13.28%;
             font-size: 16px;
+            background: #fff 0% 0% no-repeat;
             border: 2px solid #edf1f2;
             border-radius: 10px;
-            background: #f7f7f7 0% 0% no-repeat;
             padding: 0 20px;
-            margin: 0 1% 20px 0;
             cursor: pointer;
             transition: all 0.4s;
+            &:hover {
+                background: #e2e7e9;
+                color: var(--color-blue);
+            }
             &.active {
                 border-color: var(--color-blue);
                 background: var(--color-blue) 0% 0% no-repeat;
                 color: #fff;
-            }
-        }
-        button {
-            width: 150px;
-            height: 40px;
-            border: 2px solid #edf1f2;
-            border-radius: 28px;
-            background: #f7f7f7 0% 0% no-repeat;
-            padding: 0 20px;
-            margin-bottom: 20px;
-            flex-basis: 13.28%;
-            width: 13.28%;
-            &:hover {
-                background: #fff;
-                color: var(--color-blue);
             }
         }
     }
