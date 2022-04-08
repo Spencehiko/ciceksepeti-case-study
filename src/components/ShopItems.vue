@@ -3,8 +3,8 @@ import { storeToRefs } from 'pinia';
 import { useStore } from '../stores/store';
 
 const store = useStore();
-const { addToCart } = store;
-const { products, categoryName, cart, addedProducts } = storeToRefs(store);
+const { addToCart, changeQuantity } = store; 
+const { products, categoryName, productQuantity } = storeToRefs(store);
 
 </script>
 <template>
@@ -34,13 +34,30 @@ const { products, categoryName, cart, addedProducts } = storeToRefs(store);
                         type="button"
                         class="add-to-cart"
                         @click="addToCart(product.id)"
-                        v-if="!addedProducts.includes(product.id)"
+                        v-if="!productQuantity(product.id)"
                     >
                         Sepete Ekle
                     </button>
                     <div class="buttons-div" v-else>
-                        <button class="decrease">
-                            <img src="@/assets/images/add.svg" alt="Çıkar">
+                        <button
+                            class="decrease"
+                            @click="changeQuantity(product.id, -1)"
+                        >
+                            <img
+                                src="@/assets/images/minus.png"
+                                alt="Azalt"
+                                width="30"
+                                height="30"
+                            />
+                        </button>
+                        <span class="quantity">{{
+                            productQuantity(product.id)
+                        }}</span>
+                        <button
+                            class="increase"
+                            @click="changeQuantity(product.id, 1)"
+                        >
+                            <img src="@/assets/images/add.svg" alt="Artır" />
                         </button>
                     </div>
                 </div>

@@ -3,7 +3,7 @@ import { storeToRefs } from 'pinia';
 import { useStore } from '../stores/store';
 
 const store = useStore();
-const { cart } = storeToRefs(store);
+const { totalQuantity } = storeToRefs(store);
 </script>
 
 <template>
@@ -21,7 +21,7 @@ const { cart } = storeToRefs(store);
         <div class="cart">
             <img src="@/assets/images/cart.svg" alt="Sepet" class="cart-icon" />
             <span class="cart-text">Sepetim</span>
-            <span class="cart-item-count">{{ cart.length }}</span>
+            <span class="cart-item-count">{{ totalQuantity }}</span>
         </div>
     </div>
 </template>
