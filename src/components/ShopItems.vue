@@ -34,7 +34,7 @@ const { products, categoryName, cart, addedProducts } = storeToRefs(store);
                         type="button"
                         class="add-to-cart"
                         @click="addToCart(product.id)"
-                        v-if="addedProducts.includes(product.id)"
+                        v-if="!addedProducts.includes(product.id)"
                     >
                         Sepete Ekle
                     </button>
