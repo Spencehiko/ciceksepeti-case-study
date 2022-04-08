@@ -35,8 +35,8 @@ body {
     padding: 0;
     margin: 0;
 }
-input {
-    font-family: "Oswald", sans-serif;
+input, textarea, button {
+    font-family: inherit;
 }
 .divider {
     font-size: 35px;

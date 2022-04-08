@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import categories from '@/datas/categories.json';
+import { storeToRefs } from 'pinia';
+import { useStore } from '../stores/store';
+
+const store = useStore();
+const { category } = storeToRefs(store);
+
 </script>
 
 <template>
@@ -9,9 +15,17 @@ import categories from '@/datas/categories.json';
             <span>Kategoriler</span>
         </div>
         <div class="wrapper">
-            <button class="category">Tüm Kategoriler</button>
-            <button v-for="category in categories" :key="category.id" class="category">
-                {{ category.title }}
+            <button class="category" :class="{ active: category === 0 }" @click="category = 0">
+                Tüm Kategoriler
+            </button>
+            <button
+                v-for="categoryItem in categories"
+                :key="categoryItem.id"
+                class="category"
+                :class="{ active: category === categoryItem.id }"
+                @click="category = categoryItem.id"
+            >
+                {{ categoryItem.title }}
             </button>
         </div>
     </div>
@@ -24,8 +38,7 @@ import categories from '@/datas/categories.json';
         margin-bottom: 20px;
         img {
             width: 20px;
-            height: 20px;
-            margin-top: 2px;
+            height: 19px;
         }
         & span {
             font-size: 24px;
@@ -36,31 +49,37 @@ import categories from '@/datas/categories.json';
     }
     .wrapper {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
         flex-wrap: wrap;
         .category {
             height: 50px;
-            width: 200px;
-            font-size: 18px;
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 13.28%;
+            width: 13.28%;
+            font-size: 16px;
             border: 2px solid #edf1f2;
-            border-radius: 28px;
+            border-radius: 10px;
             background: #f7f7f7 0% 0% no-repeat;
             padding: 0 20px;
-            margin-bottom: 20px;
-            &:hover {
-                background: #fff;
-                color: var(--color-blue);
+            margin: 0 1% 20px 0;
+            cursor: pointer;
+            transition: all 0.4s;
+            &.active {
+                border-color: var(--color-blue);
+                background: var(--color-blue) 0% 0% no-repeat;
+                color: #fff;
             }
         }
         button {
-            width: 200px;
+            width: 150px;
             height: 40px;
             border: 2px solid #edf1f2;
             border-radius: 28px;
             background: #f7f7f7 0% 0% no-repeat;
             padding: 0 20px;
             margin-bottom: 20px;
+            flex-basis: 13.28%;
+            width: 13.28%;
             &:hover {
                 background: #fff;
                 color: var(--color-blue);
@@ -73,7 +92,8 @@ import categories from '@/datas/categories.json';
         padding: 0 20px;
         .wrapper {
             .category {
-                margin: 10px auto;
+                flex-basis: 49%;
+                width: 49%;
             }
         }
     }
