@@ -25,6 +25,9 @@ import FooterMenu from "./components/FooterMenu.vue";
     </main>
     <footer>
         <FooterMenu class="component" />
+        <span class="copyright"
+            >Copyright © 2019 Çiçek Sepeti İnternet Hizmetleri A.Ş</span
+        >
     </footer>
 </template>
 <style lang="less">
@@ -39,6 +42,9 @@ input,
 textarea,
 button {
     font-family: inherit;
+}
+.vertical-middle {
+    margin: auto 0;
 }
 .component {
     margin-top: 20px;
@@ -77,6 +83,14 @@ button {
             color: #000;
         }
     }
+}
+.copyright {
+    display: inline-block;
+    width: 100%;
+    background: #e6e6e6;
+    text-align: center;
+    font-size: 13px;
+    padding: 20px 0;
 }
 @media screen and (max-width: 1024px) {
     .component {

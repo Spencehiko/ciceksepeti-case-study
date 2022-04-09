@@ -50,6 +50,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 30px;
+    padding-bottom: 30px;
     flex-grow: 0;
     flex-shrink: 0;
     gap: 20px;
