@@ -64,6 +64,7 @@ const { categoryId } = storeToRefs(store);
             border-radius: 10px;
             padding: 0 20px;
             cursor: pointer;
+            text-align: center;
             transition: all 0.4s;
             &:hover {
                 background: #e2e7e9;

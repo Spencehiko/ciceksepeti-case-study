@@ -24,18 +24,20 @@ import FooterMenu from "./components/FooterMenu.vue";
         <CampaignItems class="component" />
     </main>
     <footer>
-        <FooterMenu />
+        <FooterMenu class="component" />
     </footer>
 </template>
 <style lang="less">
 @import "./assets/styles/main.less";
 html,
 body {
-    font-family: "Oswald", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     padding: 0;
     margin: 0;
 }
-input, textarea, button {
+input,
+textarea,
+button {
     font-family: inherit;
 }
 .component {
@@ -43,7 +45,7 @@ input, textarea, button {
     padding: 0 220px;
 }
 .divider {
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 700;
     color: #fff;
     margin: 30px auto 0;
@@ -77,6 +79,9 @@ input, textarea, button {
     }
 }
 @media screen and (max-width: 1024px) {
+    .component {
+        padding: 0 20px;
+    }
     .divider {
         text-align: center;
     }

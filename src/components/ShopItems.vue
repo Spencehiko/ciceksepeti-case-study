@@ -73,6 +73,7 @@ const formatPrice = (price: number) => {
 </template>
 <style lang="less" scoped>
 .shop {
+    padding-bottom: 10px;
     .header {
         margin-bottom: 10px;
         img {
