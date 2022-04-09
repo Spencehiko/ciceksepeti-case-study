@@ -140,7 +140,7 @@ const formatPrice = (price: number) => {
     }
     .tooltip {
         position: absolute;
-        bottom: -65px;
+        bottom: -80px;
         right: 0;
         width: 250px;
         background: #f54257;
