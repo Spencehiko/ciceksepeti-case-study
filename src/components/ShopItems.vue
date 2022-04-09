@@ -6,6 +6,9 @@ const store = useStore();
 const { addToCart, changeQuantity } = store;
 const { products, categoryName, productQuantity } = storeToRefs(store);
 
+const formatPrice = (price: number) => {
+    return price.toLocaleString('tr-TR', { minimumFractionDigits: 2 });
+};
 </script>
 <template>
     <div class="shop">
@@ -13,7 +16,7 @@ const { products, categoryName, productQuantity } = storeToRefs(store);
             <img src="@/assets/images/leaf.svg" alt="Tüm Kategoriler" />
             <span>{{ categoryName }}</span>
         </div>
-        <div class="products">
+        <div class="products" v-if="products.length">
             <div class="product" v-for="product in products" :key="product.id">
                 <div class="image">
                     <img :src="product.imgSrc" :alt="product.title" />
@@ -28,7 +31,7 @@ const { products, categoryName, productQuantity } = storeToRefs(store);
                         >
                     </div>
                     <div class="price">
-                        <span>{{ product.price }} TL</span>
+                        <span>{{ formatPrice(product.price) }} TL</span>
                     </div>
                     <button
                         type="button"
@@ -63,6 +66,9 @@ const { products, categoryName, productQuantity } = storeToRefs(store);
                 </div>
             </div>
         </div>
+        <div class="no-products" v-else>
+            <span>Ürün Bulunamadı</span>
+        </div>
     </div>
 </template>
 <style lang="less" scoped>
@@ -93,6 +99,7 @@ const { products, categoryName, productQuantity } = storeToRefs(store);
             font-size: 15px;
             font-weight: 600;
             .image {
+                cursor: pointer;
                 img {
                     margin: 0 auto;
                     width: 100%;
@@ -100,6 +107,7 @@ const { products, categoryName, productQuantity } = storeToRefs(store);
             }
             .info {
                 .title {
+                    cursor: pointer;
                     min-height: 4rem;
                     span {
                         margin-bottom: 5px;
@@ -178,6 +186,23 @@ const { products, categoryName, productQuantity } = storeToRefs(store);
             }
         }
     }
+    .no-products {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        flex-grow: 0;
+        flex-basis: calc(20% - 60px);
+        border: 1px solid #e2e7e9;
+        padding: 20px;
+        font-size: 15px;
+        font-weight: 600;
+        span {
+            font-size: 20px;
+            font-weight: 500;
+            color: #000;
+        }
+    }
 }
 @media (max-width: 1226px) {
     .shop {
@@ -198,6 +223,7 @@ const { products, categoryName, productQuantity } = storeToRefs(store);
         .products {
             .product {
                 flex-basis: calc(100% - 60px);
+                margin: 0 auto;
             }
         }
     }

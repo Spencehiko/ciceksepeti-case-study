@@ -55,8 +55,7 @@ const { categoryId } = storeToRefs(store);
         gap: 20px 1%;
         .category {
             height: 50px;
-            flex-grow: 1;
-            flex-shrink: 0;
+            flex-grow: 0;
             flex-basis: 13.28%;
             width: 13.28%;
             font-size: 16px;
@@ -84,7 +83,6 @@ const { categoryId } = storeToRefs(store);
         .wrapper {
             .category {
                 flex-basis: 49%;
-                width: 49%;
             }
         }
     }

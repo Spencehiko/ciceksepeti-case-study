@@ -3,13 +3,24 @@ import { storeToRefs } from 'pinia';
 import { useStore } from '../stores/store';
 
 const store = useStore();
-const { totalQuantity } = storeToRefs(store);
+const { totalQuantity, totalPrice } = storeToRefs(store);
+const formatPrice = (price: number) => {
+    return price.toLocaleString('tr-TR', { minimumFractionDigits: 2 });
+};
 </script>
 
 <template>
     <div class="header">
-        <img src="@/assets/images/logo.svg" alt="Çiçeksepeti" class="logo logo-bg" />
-        <img src="@/assets/images/logo-sm.svg" alt="Çiçeksepeti" class="logo logo-sm" />
+        <img
+            src="@/assets/images/logo.svg"
+            alt="Çiçeksepeti"
+            class="logo logo-bg"
+        />
+        <img
+            src="@/assets/images/logo-sm.svg"
+            alt="Çiçeksepeti"
+            class="logo logo-sm"
+        />
         <div class="search">
             <img
                 src="@/assets/images/search.svg"
@@ -22,6 +33,28 @@ const { totalQuantity } = storeToRefs(store);
             <img src="@/assets/images/cart.svg" alt="Sepet" class="cart-icon" />
             <span class="cart-text">Sepetim</span>
             <span class="cart-item-count">{{ totalQuantity }}</span>
+            <div class="tooltip">
+                <span class="tooltip-text" v-if="500 - totalPrice > 0">
+                    <img src="@/assets/images/lightning.svg" alt="Fark" />
+                    <span class="tooltip-money"
+                        >{{ formatPrice(500 - totalPrice) }} TL</span
+                    >
+                    ürün daha ekleyin kargo bedava
+                </span>
+                <span class="tooltip-text" v-else> Kargonuz bedava! </span>
+                <div class="progress-bar">
+                    <div
+                        class="progress-bar-inner"
+                        :style="{
+                            width: `${
+                                (totalPrice / 500) * 100 < 100
+                                    ? (totalPrice / 500) * 100
+                                    : 100
+                            }%`,
+                        }"
+                    ></div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -69,6 +102,7 @@ const { totalQuantity } = storeToRefs(store);
         }
     }
     .cart {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -80,7 +114,7 @@ const { totalQuantity } = storeToRefs(store);
         opacity: 1;
         border: 2px solid #edf1f2;
         border-radius: 28px;
-        position: relative;
+        cursor: pointer;
         &-icon {
             width: 20px;
             height: 20px;
@@ -102,6 +136,49 @@ const { totalQuantity } = storeToRefs(store);
             font-size: 16px;
             text-align: center;
             line-height: 25px;
+        }
+    }
+    .tooltip {
+        position: absolute;
+        bottom: -65px;
+        right: 0;
+        width: 250px;
+        background: #f54257;
+        border-radius: 7px;
+        padding: 10px 20px;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 6px solid #f54257;
+            top: -6px;
+            right: 35px;
+            z-index: 5;
+        }
+        img {
+            margin-right: 5px;
+        }
+        &-text {
+            font-size: 14px;
+            color: #fff;
+        }
+        &-money {
+            color: #ffce00;
+        }
+        .progress-bar {
+            height: 5px;
+            background: #d01d32;
+            border-radius: 22px;
+            margin-top: 5px;
+            margin-left: 13px;
+            .progress-bar-inner {
+                height: 100%;
+                background: #ffce00;
+                border-radius: 5px;
+            }
         }
     }
 }
