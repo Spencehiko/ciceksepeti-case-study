@@ -83,7 +83,7 @@ const formatPrice = (price: number) => {
         span {
             font-size: 20px;
             font-weight: lighter;
-            color: #707070;
+            color: var(--color-dark-gray);
             margin-left: 5px;
         }
     }
@@ -95,7 +95,7 @@ const formatPrice = (price: number) => {
             height: 100%;
             flex-grow: 0;
             flex-basis: calc(20% - 60px);
-            border: 1px solid #e2e7e9;
+            border: 1px solid var(--color-light-gray);
             padding: 20px;
             font-size: 15px;
             font-weight: 600;
@@ -120,7 +120,7 @@ const formatPrice = (price: number) => {
                         -webkit-box-orient: vertical;
                         font-size: 18px;
                         font-weight: lighter;
-                        color: #555555;
+                        color: var(--color-darker-gray);
                     }
                 }
                 .price {
@@ -128,7 +128,7 @@ const formatPrice = (price: number) => {
                     span {
                         font-size: 18px;
                         font-weight: lighter;
-                        color: #000000;
+                        color: var(--color-black)000;
                     }
                 }
                 .free-delivery {
@@ -136,7 +136,7 @@ const formatPrice = (price: number) => {
                     margin-bottom: 5px;
                     span {
                         font-size: 14px;
-                        color: #51b549;
+                        color: var(--color-green);
                         text-overflow: ellipsis;
                         white-space: nowrap;
                         overflow: hidden;
@@ -145,7 +145,7 @@ const formatPrice = (price: number) => {
                 .add-to-cart {
                     width: 100%;
                     border: 1px solid var(--color-blue);
-                    background: #fff;
+                    background: var(--color-white);
                     color: var(--color-blue);
                     font-size: 14px;
                     font-weight: 600;
@@ -155,20 +155,20 @@ const formatPrice = (price: number) => {
                     transition: all 0.4s;
                     &:hover {
                         background: var(--color-blue);
-                        color: #fff;
+                        color: var(--color-white);
                     }
                 }
                 .buttons-div {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    border: 1px solid #e2e7e9;
+                    border: 1px solid var(--color-light-gray);
                     border-radius: 25px;
                     .decrease,
                     .increase {
                         border-radius: 50%;
                         border: none;
-                        background: #fff;
+                        background: var(--color-white);
                         cursor: pointer;
                         transition: all 0.4s;
                         img {
@@ -181,7 +181,7 @@ const formatPrice = (price: number) => {
                     .quantity {
                         font-size: 18px;
                         font-weight: lighter;
-                        color: #000000;
+                        color: var(--color-black)000;
                     }
                 }
             }
@@ -194,14 +194,14 @@ const formatPrice = (price: number) => {
         height: 100%;
         flex-grow: 0;
         flex-basis: calc(20% - 60px);
-        border: 1px solid #e2e7e9;
+        border: 1px solid var(--color-light-gray);
         padding: 20px;
         font-size: 15px;
         font-weight: 600;
         span {
             font-size: 20px;
             font-weight: 500;
-            color: #000;
+            color: var(--color-black);
         }
     }
 }

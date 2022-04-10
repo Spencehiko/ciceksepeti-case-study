@@ -87,11 +87,11 @@
     margin-top: 100px;
     padding-top: 150px;
     padding-bottom: 50px;
-    background: #f2f2f2;
+    background: var(--color-white-dark);
     &-download {
         display: flex;
         justify-content: space-evenly;
-        background: #ffffff;
+        background: var(--color-white)fff;
         border-radius: 111px;
         padding: 0 300px;
         height: 200px;
@@ -143,7 +143,7 @@
             flex-direction: column;
             gap: 30px;
             padding-right: 50px;
-            border-right: 1px dashed #9B9B9B;
+            border-right: 1px dashed var(--color-gray);
             width: 450px;
             .logo{
                 width: 230px;
@@ -156,7 +156,7 @@
                 margin: 0;
             }
             a {
-                color: #000
+                color: var(--color-black)
             }
         }
         .column{
@@ -165,7 +165,7 @@
             gap: 10px;
             text-align: center;
             .header{
-                color: #044DC3;
+                color: var(--color-blue);
                 font-size: 18px;
             }
             .item{
@@ -248,7 +248,7 @@
                     text-align: center;
                 }
                 a {
-                    color: #000
+                    color: var(--color-black)
                 }
             }
             .column{

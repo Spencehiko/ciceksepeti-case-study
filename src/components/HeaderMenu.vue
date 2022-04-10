@@ -66,7 +66,7 @@ const formatPrice = (price: number) => {
     align-items: center;
     justify-content: space-between;
     height: 60px;
-    background-color: #fff;
+    background-color: var(--color-white);
     .logo {
         width: 150px;
         height: 100%;
@@ -81,8 +81,8 @@ const formatPrice = (price: number) => {
     .search {
         display: flex;
         align-items: center;
-        background: #f7f7f7;
-        border: 2px solid #edf1f2;
+        background: var(--color-white-dark);
+        border: 2px solid var(--color-blue-light);
         border-radius: 28px;
         padding: 0 10px 0 20px;
         margin-right: auto;
@@ -99,15 +99,15 @@ const formatPrice = (price: number) => {
             border: none;
             outline: none;
             font-size: 14px;
-            color: #000;
-            background: #f7f7f7;
+            color: var(--color-black);
+            background: var(--color-white-dark);
         }
         &-button {
             height: 40px;
             border: none;
             outline: none;
-            background: #51B549;
-            color: #fff;
+            background: var(--color-green);
+            color: var(--color-white);
             font-size: 18px;
             cursor: pointer;
             border-radius: 28px;
@@ -122,10 +122,10 @@ const formatPrice = (price: number) => {
         min-width: 140px;
         max-width: 150px;
         height: 50px;
-        background: #044dc3 0% 0% no-repeat padding-box;
+        background: var(--color-blue);
         border-radius: 28px;
         opacity: 1;
-        border: 2px solid #edf1f2;
+        border: 2px solid var(--color-blue-light);
         border-radius: 28px;
         cursor: pointer;
         &-icon {
@@ -135,7 +135,7 @@ const formatPrice = (price: number) => {
         }
         &-text {
             font-size: 16px;
-            color: #fff;
+            color: var(--color-white);
         }
         &-item-count {
             position: absolute;
@@ -143,9 +143,9 @@ const formatPrice = (price: number) => {
             right: -5px;
             width: 25px;
             height: 25px;
-            background: #ff5b4d;
+            background: var(--color-pinkish-orange);
             border-radius: 50%;
-            color: #fff;
+            color: var(--color-white);
             font-size: 16px;
             text-align: center;
             line-height: 25px;
@@ -156,7 +156,7 @@ const formatPrice = (price: number) => {
         bottom: -80px;
         right: 0;
         width: 260px;
-        background: #f54257;
+        background: var(--color-pink);
         border-radius: 7px;
         padding: 10px 20px;
         &:before {
@@ -166,7 +166,7 @@ const formatPrice = (price: number) => {
             height: 0;
             border-left: 6px solid transparent;
             border-right: 6px solid transparent;
-            border-bottom: 6px solid #f54257;
+            border-bottom: 6px solid var(--color-pink);
             top: -6px;
             right: 35px;
             z-index: 5;
@@ -176,20 +176,20 @@ const formatPrice = (price: number) => {
         }
         &-text {
             font-size: 14px;
-            color: #fff;
+            color: var(--color-white);
         }
         &-money {
-            color: #ffce00;
+            color: var(--color-yellow);
         }
         .progress-bar {
             height: 5px;
-            background: #d01d32;
+            background: var(--color-maroon);
             border-radius: 22px;
             margin-top: 5px;
             margin-left: 13px;
             .progress-bar-inner {
                 height: 100%;
-                background: #ffce00;
+                background: var(--color-yellow);
                 border-radius: 5px;
             }
         }

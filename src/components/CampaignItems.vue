@@ -54,7 +54,7 @@
     flex-grow: 0;
     flex-shrink: 0;
     gap: 20px;
-    border-top: 2px solid #edf1f2;
+    border-top: 2px solid var(--color-blue-light);
     &-item {
         flex-basis: calc(32% - 20px);
         display: flex;
@@ -71,11 +71,11 @@
             .campaign-title {
                 font-size: 24px;
                 font-weight: 300;
-                color: #707070;
+                color: var(--color-dark-gray);
             }
             button {
-                background: #fff;
-                color: #e64e41;
+                background: var(--color-white);
+                color: var(--color-orange);
                 border: none;
                 padding: 0.5rem 1rem;
                 border-radius: 15px;
@@ -85,13 +85,13 @@
             }
         }
         &.item-1 {
-            background: #ffeae8 0% 0% no-repeat padding-box;
+            background: var(--color-pink-soft) 0% 0% no-repeat padding-box;
         }
         &.item-2 {
-            background: #e8f1ff 0% 0% no-repeat padding-box;
+            background: var(--color-blue-soft) 0% 0% no-repeat padding-box;
         }
         &.item-3 {
-            background: #e2f7e1 0% 0% no-repeat padding-box;
+            background: var(--color-green-soft) 0% 0% no-repeat padding-box;
         }
     }
 }

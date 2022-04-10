@@ -59,21 +59,21 @@ const { categoryId } = storeToRefs(store);
             flex-basis: 13.28%;
             width: 13.28%;
             font-size: 16px;
-            background: #fff 0% 0% no-repeat;
-            border: 2px solid #edf1f2;
+            background: var(--color-white) 0% 0% no-repeat;
+            border: 2px solid var(--color-blue-light);
             border-radius: 10px;
             padding: 0 20px;
             cursor: pointer;
             text-align: center;
             transition: all 0.4s;
             &:hover {
-                background: #e2e7e9;
+                background: var(--color-light-gray);
                 color: var(--color-blue);
             }
             &.active {
                 border-color: var(--color-blue);
                 background: var(--color-blue) 0% 0% no-repeat;
-                color: #fff;
+                color: var(--color-white);
             }
         }
     }

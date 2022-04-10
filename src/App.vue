@@ -56,7 +56,7 @@ button {
 .divider {
     font-size: 40px;
     font-weight: 700;
-    color: #fff;
+    color: var(--color-white);
     margin: 30px auto 0;
     width: 100%;
     height: 60px;
@@ -78,19 +78,19 @@ button {
         font-size: 14px;
         cursor: pointer;
         &:last-child {
-            color: #51b549;
+            color: var(--color-green);
         }
         + .breadcrumb-item::before {
             content: ">";
             margin: 0 10px;
-            color: #000;
+            color: var(--color-black);
         }
     }
 }
 .copyright {
     display: inline-block;
     width: 100%;
-    background: #e6e6e6;
+    background: var(--color-red-soft);
     text-align: center;
     font-size: 13px;
     padding: 20px 0;
