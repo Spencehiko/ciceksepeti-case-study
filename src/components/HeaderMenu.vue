@@ -3,7 +3,7 @@ import { storeToRefs } from 'pinia';
 import { useStore } from '../stores/store';
 
 const store = useStore();
-const { totalQuantity, totalPrice } = storeToRefs(store);
+const { totalQuantity, totalPrice, searchQuery } = storeToRefs(store);
 const formatPrice = (price: number) => {
     return price.toLocaleString('tr-TR', { minimumFractionDigits: 2 });
 };
@@ -27,7 +27,7 @@ const formatPrice = (price: number) => {
                 alt="Search"
                 class="search-icon"
             />
-            <input type="text" placeholder="Ürün Ara" class="search-input" />
+            <input type="text" placeholder="Ürün Ara" class="search-input" v-model="searchQuery" />
             <button type="button" class="search-button">Ara</button>
         </div>
         <div class="cart">

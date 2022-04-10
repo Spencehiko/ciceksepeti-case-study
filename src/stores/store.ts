@@ -28,6 +28,7 @@ export const useStore = defineStore({
     productId: 0 as number,
     categoryId: 0 as number,
     cart: [] as any[],
+    searchQuery: '' as string,
   }),
   getters: {
     categoryName(): string {
@@ -35,7 +36,15 @@ export const useStore = defineStore({
       return this.categories.find((category) => category.id === this.categoryId)?.title || 'Tüm Kategoriler';
     },
     products(): Product[] {
-      if (this.categoryId === 0) return products;
+      if (this.categoryId === 0) {
+        if(this.searchQuery.length >= 3) {
+          return products.filter((product) => product.title.toLowerCase().includes(this.searchQuery.toLowerCase()));
+        }
+        return products;
+      }
+      if(this.searchQuery.length >= 3) {
+        return products.filter((product) => product.title.toLowerCase().includes(this.searchQuery.toLowerCase()) && product.categories.includes(this.categoryId));
+      }
       return products.filter((product) => product.categories.includes(this.categoryId));
     },
     productQuantity: (state) => (productId: number) => {

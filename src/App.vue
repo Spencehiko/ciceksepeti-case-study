@@ -26,7 +26,7 @@ import FooterMenu from "./components/FooterMenu.vue";
     <footer>
         <FooterMenu class="component" />
         <span class="copyright"
-            >Copyright © 2019 Çiçek Sepeti İnternet Hizmetleri A.Ş</span
+            >Copyright © 2022 Çiçek Sepeti İnternet Hizmetleri A.Ş</span
         >
     </footer>
 </template>
