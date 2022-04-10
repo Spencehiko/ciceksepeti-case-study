@@ -128,7 +128,7 @@ const formatPrice = (price: number) => {
                     span {
                         font-size: 18px;
                         font-weight: lighter;
-                        color: var(--color-black)000;
+                        color: var(--color-black);
                     }
                 }
                 .free-delivery {
@@ -181,7 +181,7 @@ const formatPrice = (price: number) => {
                     .quantity {
                         font-size: 18px;
                         font-weight: lighter;
-                        color: var(--color-black)000;
+                        color: var(--color-black);
                     }
                 }
             }
