@@ -32,6 +32,9 @@ import FooterMenu from "./components/FooterMenu.vue";
 </template>
 <style lang="less">
 @import "./assets/styles/main.less";
+* {
+  max-width: 100%;
+}
 html,
 body {
     font-family: "Source Sans Pro", sans-serif;
@@ -58,7 +61,7 @@ button {
     width: 100%;
     height: 60px;
     text-align: left;
-    background: url("@/assets/images/header-bg.png") no-repeat center;
+    background: url("@/assets/images/header-bg.png");
     span {
         display: inline-block;
         margin: auto 220px;
@@ -97,6 +100,7 @@ button {
         padding: 0 20px;
     }
     .divider {
+        margin-top: 100px;
         text-align: center;
     }
     .divider span {

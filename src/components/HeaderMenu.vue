@@ -28,14 +28,15 @@ const formatPrice = (price: number) => {
                 class="search-icon"
             />
             <input type="text" placeholder="Ürün Ara" class="search-input" />
+            <button type="button" class="search-button">Ara</button>
         </div>
         <div class="cart">
             <img src="@/assets/images/cart.svg" alt="Sepet" class="cart-icon" />
             <span class="cart-text">Sepetim</span>
             <span class="cart-item-count">{{ totalQuantity }}</span>
             <div class="tooltip">
+                <img src="@/assets/images/lightning.svg" alt="Fark" />
                 <span class="tooltip-text" v-if="500 - totalPrice > 0">
-                    <img src="@/assets/images/lightning.svg" alt="Fark" />
                     <span class="tooltip-money"
                         >{{ formatPrice(500 - totalPrice) }} TL</span
                     >
@@ -80,12 +81,13 @@ const formatPrice = (price: number) => {
     .search {
         display: flex;
         align-items: center;
-        background: #f7f7f7 0% 0% no-repeat;
+        background: #f7f7f7;
         border: 2px solid #edf1f2;
         border-radius: 28px;
-        padding: 0 20px;
+        padding: 0 10px 0 20px;
         margin-right: auto;
         width: 800px;
+        height: 50px;
         &-icon {
             width: 20px;
             height: 20px;
@@ -98,7 +100,18 @@ const formatPrice = (price: number) => {
             outline: none;
             font-size: 14px;
             color: #000;
-            background: #f7f7f7 0% 0% no-repeat;
+            background: #f7f7f7;
+        }
+        &-button {
+            height: 40px;
+            border: none;
+            outline: none;
+            background: #51B549;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 28px;
+            padding: 0 25px;
         }
     }
     .cart {
@@ -142,7 +155,7 @@ const formatPrice = (price: number) => {
         position: absolute;
         bottom: -80px;
         right: 0;
-        width: 250px;
+        width: 260px;
         background: #f54257;
         border-radius: 7px;
         padding: 10px 20px;
@@ -195,6 +208,10 @@ const formatPrice = (price: number) => {
             margin-left: 10px;
             min-width: 50px;
             width: 100%;
+            .tooltip {
+                min-width: 350px;
+                bottom: -60px;
+            }
         }
     }
 }
@@ -213,11 +230,19 @@ const formatPrice = (price: number) => {
         }
         .search {
             min-width: 70px;
+            &-button {
+                display: none;
+            }
         }
         .cart {
             width: 100%;
             &-text {
                 display: none;
+            }
+            .tooltip {
+                min-width: 150px;
+                bottom: -90px;
+                right: 1px
             }
         }
     }

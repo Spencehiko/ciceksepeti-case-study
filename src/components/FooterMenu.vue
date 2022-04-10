@@ -91,7 +91,7 @@
     &-download {
         display: flex;
         justify-content: space-evenly;
-        background: #ffffff 0% 0% no-repeat padding-box;
+        background: #ffffff;
         border-radius: 111px;
         padding: 0 300px;
         height: 200px;
@@ -181,13 +181,108 @@
         padding: 0 80px;
     }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1410px) {
     .footer {
         &-download {
-            justify-content: space-evenly;
             padding: 0 30px;
+            .phones{
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 650px) {
+    .footer {
+        &-download {
+            height: auto;
+            border-radius: 5px;
             &-content {
-                padding: 35px 0;
+                flex-direction: column;
+                text-align: center;
+                img {
+                    height: 60px;
+                    width: 60px;
+                    margin: 10px auto;
+                }
+                &-text {
+                    .title {
+                        font-size: 18px;
+                        font-weight: bold;
+                        &-qr {
+                            margin-top: 10px;
+                            font-size: 16px;
+                            font-weight: normal;
+                            display: inline-block;
+                        }
+                    }
+                }
+                &-row {
+                    gap: 0px;
+                    img {
+                        margin: 10px auto;
+                        cursor: pointer;
+                        height: 35px;
+                        width: 100px;
+                        &.appstore {
+                            width: 120px;
+                        }
+                    }
+                }
+            }
+        }
+        &-menu {
+            flex-direction: column;
+            .info{
+                border: none;
+                padding-right: 0;
+                width: 100%;
+                margin-bottom: 50px;
+                .logo{
+                    margin: 0 auto;
+                }
+                .buttons{
+                    gap: 10px;
+                    justify-content: space-between;
+                }
+                p{
+                    text-align: center;
+                }
+                a {
+                    color: #000
+                }
+            }
+            .column{
+                margin-bottom: 40px;
+            }
+        }
+        .description{
+            margin-top: 50px;
+            font-size: 18px;
+            padding: 0 20px;
+        }
+    }
+}
+@media screen and (max-width: 290px) {
+    .footer {
+        &-download {
+            &-content {
+                &-row {
+                    flex-direction: column;
+                }
+            }
+        }
+        &-menu {
+            .info{
+                .logo{
+                    width: 100px;
+                }
+                .buttons{
+                    gap: 10px;
+                    justify-content: space-between;
+                    img {
+                        width: 20px;
+                    }
+                }
             }
         }
     }
