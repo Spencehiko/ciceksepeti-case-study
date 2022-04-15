@@ -10,12 +10,12 @@ import FooterMenu from "./components/FooterMenu.vue";
     <header>
         <HeaderMenu class="component" />
         <div class="divider">
-            <span>ÇiçekSepeti</span>
+            <span>CaseStudy</span>
         </div>
         <div class="breadcrumb">
-            <span class="breadcrumb-item">Ciceksepeti Market</span>
+            <span class="breadcrumb-item">CaseStudy Market</span>
             <span class="breadcrumb-item">İstanbul</span>
-            <span class="breadcrumb-item">CiceksepetiBreadCrumb</span>
+            <span class="breadcrumb-item">CaseStudyBreadCrumb</span>
         </div>
     </header>
     <main>
@@ -26,7 +26,7 @@ import FooterMenu from "./components/FooterMenu.vue";
     <footer>
         <FooterMenu class="component" />
         <span class="copyright"
-            >Copyright © 2022 Çiçek Sepeti İnternet Hizmetleri A.Ş</span
+            >Copyright © 2022 CaseStudy İnternet Hizmetleri A.Ş</span
         >
     </footer>
 </template>

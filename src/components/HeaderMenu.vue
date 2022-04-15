@@ -71,6 +71,7 @@ const formatPrice = (price: number) => {
         width: 150px;
         height: 100%;
         margin-right: 20px;
+        filter: blur(4px);
         &-bg {
             display: block;
         }
@@ -153,9 +154,10 @@ const formatPrice = (price: number) => {
     }
     .tooltip {
         position: absolute;
-        bottom: -80px;
+        bottom: -70px;
         right: 0;
         width: 260px;
+        max-width: 260px;
         background: var(--color-pink);
         border-radius: 7px;
         padding: 10px 20px;

@@ -39,7 +39,7 @@
                     <img src="@/assets/images/blog.svg" alt="Blog" />
                 </div>
                 <p>
-                    CicekSepeti.com olarak kişisel verilerinizin gizliliğini önemsiyoruz. 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında oluşturduğumuz aydınlatma metnine <a href="javascript:;">buradan</a> ulaşabilirsiniz.
+                    hicaku.com olarak kişisel verilerinizin gizliliğini önemsiyoruz. 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında oluşturduğumuz aydınlatma metnine <a href="javascript:;">buradan</a> ulaşabilirsiniz.
                 </p>
             </div>
             <div class="column">
