@@ -1,6 +1,6 @@
 # ciceksepeti
 
-**Live Demo:  [ciceksepeti](https://ciceksepeti.hicaku.com/)**
+**Live Demo:  [ciceksepeti](https://cicekcase.hicaku.com/)**
 
 Hello, this is the case study for my application to ÇiçekSepeti. 
 

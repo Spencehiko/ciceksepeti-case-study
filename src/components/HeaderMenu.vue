@@ -71,7 +71,6 @@ const formatPrice = (price: number) => {
         width: 150px;
         height: 100%;
         margin-right: 20px;
-        filter: blur(4px);
         &-bg {
             display: block;
         }
